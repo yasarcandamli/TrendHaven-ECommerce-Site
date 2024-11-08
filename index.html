@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendHaven</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header class="header">
+        <nav class="nav">
+            <div class="site-title">
+                <h1 class="main-title">TrendHaven</h1>
+            </div>
+
+            <!-- Filter form for searching and filtering products -->
+            <div class="filter-form">
+                <!-- Product title search input -->
+                <div class="product-title-search">
+                    <input type="text" id="product-title" placeholder="Product Name" min="0">
+                </div>
+
+                <!-- Category selection dropdown -->
+                <div class="category-filter">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category">
+                        <option value="all">All</option>
+                        <option value="men's clothing">Men's Clothing</option>
+                        <option value="women's clothing">Women's Clothing</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="jewelery">Jewelry</option>
+                    </select>
+                </div>
+
+                <!-- Price range filter inputs -->
+                <div class="price-range-search">
+                    <label for="price-range">Price Range:</label>
+                    <div class="currency-input">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="min-price" placeholder="Min Price" min="0">
+                    </div>
+                    <div class="currency-input">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="max-price" placeholder="Max Price" min="0">
+                    </div>
+                </div>
+
+                <!-- Button to apply filters -->
+                <button id="apply-filters">Apply Filters</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Section Start -->
+    <main class="main">
+        <!-- Loading spinner for async requests -->
+        <div id="loading" class="loading">
+            <p>Loading...</p>
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Display area for products -->
+        <div class="products-display">
+            <h2 class="products-title">All Products</h2>
+            <div id="product-container"></div>
+            <div class="products-container">
+                <div class="product-card">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <p>
+            &copy; 2024 TrendHaven. This project was developed for the NewMindAI Fullstack Bootcamp
+        </p>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="./javascript/main.js" type="module"></script>
+</body>
+
+</html>
