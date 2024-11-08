@@ -2,6 +2,10 @@
 
 TrendHaven is a web-based product catalog application where users can browse and filter products based on various criteria such as product name, category, and price range.
 
+## Live Demo
+
+You can visit the website [at this link](https://prismatic-hotteok-fb9eb0.netlify.app/)
+
 ## Project Overview
 
 The project features:
